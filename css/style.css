@@ -3,6 +3,7 @@
 *::after {
 	box-sizing: border-box;
 }
+
 :root {
 	--color-body: linear-gradient(135deg, #abbda1, #c9dbbf);
 	--color-container: rgba(64, 73, 59, 0.9);
@@ -21,6 +22,9 @@ body {
 	background-image: var(--color-body);
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+img {
+	max-width: 100%;
 }
 .container {
 	width: 50vw;
@@ -48,6 +52,8 @@ body {
 	min-width: 40%;
 	background-color: var(--color-container);
 	padding: 0.5rem;
+	color: white;
+	font-size: 1rem;
 }
 
 header {
@@ -66,8 +72,46 @@ header {
 	gap: 0.2rem;
 }
 .main-content {
+	padding: 1rem;
 	border-radius: 1rem;
 	background-color: var(--color-element2);
+	display: grid;
+	gap: 20px;
+
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: 1fr;
+}
+
+.meal {
+	border: 1px solid white;
+	border-radius: 3rem;
+	background-color: var(--color-element1);
+	overflow: hidden;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.meal--img {
+	border-radius: 50%;
+	max-width: 70%;
+	max-height: 40%;
+}
+.meal--name {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: white;
+}
+.meal--country {
+	font-size: 1.3rem;
+	color: rgb(190, 187, 187);
+}
+
+.meal--link {
+	font-size: 1.1rem;
+	font-style: italic;
+	color: black;
 }
 .footer {
 	border-radius: 1rem;
